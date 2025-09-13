@@ -30,27 +30,34 @@ const currentUrl = Astro.url;
   })} />
 
   <section
-    class="flex w-full flex-col items-center justify-center gap-y-4 text-center"
+    class="flex w-full flex-col items-center justify-center gap-y-4 text-center px-4 max-w-md mx-auto"
   >
     <div class="max-w-md">
-      <h1 class="mb-4 text-3xl font-medium">404: Page Not Found</h1>
-      <p class="prose mb-4">Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.</p>
-      <p class="prose text-sm text-muted-foreground">Looking for something specific? Try searching our blog or browse our latest articles.</p>
+      <h1 class="mb-4 text-3xl font-medium">404: Destination introuvable...</h1>
+      <p class="prose mb-4">Vous cherchez quelque chose ? Moi aussi.</p>
+      <img
+        src="https://media.giphy.com/media/6uGhT1O4sxpi8/giphy.gif"
+        alt="Gif Patrick John Travolta perplexe"
+        class="w-full max-w-xl mx-auto rounded-lg"
+      />
+      <p class="pt-4 prose text-sm text-muted-foreground ">Revenons ensemble sur la bonne route.</p>
     </div>
+
+
     <div class="flex flex-col sm:flex-row gap-3">
       <Link
         href="/"
         class={cn(buttonVariants({ variant: 'default' }), 'flex gap-x-1.5 group')}
       >
         <span class="transition-transform group-hover:-translate-x-1">&larr;</span>
-        Go to Home
+        Retour à l'accueil
       </Link>
-      <Link
+      <!-- <Link
         href="/blog"
         class={cn(buttonVariants({ variant: 'outline' }), 'flex gap-x-1.5')}
       >
         Browse Blog
-      </Link>
+      </Link> -->
     </div>
   </section>
 </Layout>

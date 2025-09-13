@@ -5,7 +5,6 @@ import ThemeToggle from './theme-toggle'
 import { NAV_LINKS, SITE } from '../../consts'
 import { cn } from '@/lib/utils'
 import debounce from 'lodash.debounce'
-import Logo from '../ui/logo'
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
 import { Separator } from '../ui/separator'
@@ -120,7 +119,7 @@ const Navbar = () => {
             aria-label="Home"
             title="Home"
           >
-            {isDark ? <img src="/img/YG-S-white.webp" alt="Photo YG" className="h-8 w-8 rounded-full" /> : <img src="/img/YG-S-black.webp" alt="Photo YG" className="h-8 w-8 rounded-full" />}
+            {isDark ? <img src="/img/YG-S-white.webp" alt="Photo Yoann Guion" className="h-8 w-8 rounded-full" /> : <img src="/img/YG-S-black.webp" alt="Photo Yoann Guion" className="h-8 w-8 rounded-full" />}
             
             {/* <Logo className="h-8 w-8" /> */}
             <span className={
