@@ -9,6 +9,7 @@ import Logo from '../ui/logo'
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
 import { Separator } from '../ui/separator'
+import { useTheme } from './hooks/useTheme'
 
 const Navbar = () => {
   const [scrollLevel, setScrollLevel] = useState(0)
@@ -16,6 +17,9 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activePath, setActivePath] = useState("/")
+
+  const theme = useTheme();
+  const isDark = theme === 'dark';
   
   useEffect(() => {
     setActivePath(window.location.pathname)
@@ -80,6 +84,8 @@ const Navbar = () => {
     4: { width: '50%' },
   }
 
+
+
   return (
     <>
       <motion.header
@@ -114,7 +120,9 @@ const Navbar = () => {
             aria-label="Home"
             title="Home"
           >
-            <Logo className="h-8 w-8" />
+            {isDark ? <img src="/img/YG-S-white.webp" alt="Photo YG" className="h-8 w-8 rounded-full" /> : <img src="/img/YG-S-black.webp" alt="Photo YG" className="h-8 w-8 rounded-full" />}
+            
+            {/* <Logo className="h-8 w-8" /> */}
             <span className={
               'transition-opacity duration-200 ease-in-out text-foreground/90 dark:text-white'}>
               {SITE.title}

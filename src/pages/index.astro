@@ -8,6 +8,7 @@ import Logo from '@/components/ui/logo'
 import Layout from '@/layouts/Layout.astro'
 import { getRecentPosts } from '@/lib/data-utils'
 import { SITE } from '@/consts'
+import Image from 'astro/components/Image.astro'
 
 const blog = await getRecentPosts(3)
 const currentUrl = Astro.url;
@@ -20,9 +21,16 @@ const currentUrl = Astro.url;
       class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left"
     >
       <div class="relative overflow-hidden rounded-lg sm:shrink-0 sm:overflow-hidden sm:rounded-lg">
-        <Logo
+        
+        <img
+          src="/img/YG-1.jpg"
+          alt="Photo Yoann Guion"
+          class="h-40 w-40 object-cover sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64"
+          />
+          
+        <!-- <Logo
           className="h-auto w-40 object-cover sm:w-48 md:w-56 lg:w-64 "
-        />
+        /> -->
       </div>
       <div class="mt-8 sm:mt-0 sm:max-w-xl">
         <h1
@@ -34,26 +42,14 @@ const currentUrl = Astro.url;
           <span
             class="bg-primary text-primary-foreground ring-primary/30 rounded-full px-3 py-1 text-sm font-medium ring-1"
           >
-            I'm from
+            Je viens de
           </span>
           <span class="flex items-center gap-1">
             <span class="text-foreground text-sm font-medium"> {SITE.location}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 51.18 38.4"
-              class="h-6 w-6 transition-transform duration-500 hover:rotate-12"
-              aria-hidden="true"
-              role="img"
-              focusable="false"
-              aria-labelledby="title"
-            >
-              <path
-                d="M17.75 0v38.4H3.03C1.37 38.4 0 37.04 0 35.37V3.03C0 1.36 1.37 0 3.03 0h14.72z"
-                fill="#002b7f"></path>
-              <path fill="#fcd116" d="M37.45 0v38.4h-19.7V0h19.7z"></path>
-              <path
-                d="M37.45 38.4V0h14.72c1.67 0 3.03 1.36 3.03 3.03v32.33c0 1.67-1.37 3.03-3.03 3.03H37.45v.01z"
-                fill="#ce1126"></path>
+            <svg width="800px" height="800px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="h-6 w-6 transition-transform duration-500 hover:rotate-12" preserveAspectRatio="xMidYMid meet">
+              <path fill="#ED2939" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z"></path>
+              <path fill="#002495" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z"></path>
+              <path fill="#EEE" d="M12 5h12v26H12z"></path>
             </svg>
           </span>
         </div>
@@ -81,7 +77,9 @@ const currentUrl = Astro.url;
       </div>
     </section>
 
-    <section class="flex flex-col gap-y-4" aria-labelledby="latest-posts-title" role="region">
+
+    <!-- BLOG SECTION -->
+    <!-- <section class="flex flex-col gap-y-4" aria-labelledby="latest-posts-title" role="region">
       <div class="relative" aria-labelledby="latest-posts-title">
         <h2
           id="latest-posts-title"
@@ -104,8 +102,8 @@ const currentUrl = Astro.url;
             </li>
           ))
         }
-      </ul>
-      <div class="flex justify-center" aria-label="see all posts">
+      </ul> -->
+      <!-- <div class="flex justify-center" aria-label="see all posts">
         <Link
           href="/blog"
           class={buttonVariants({ variant: 'ghost' }) + ' group'}
@@ -116,6 +114,6 @@ const currentUrl = Astro.url;
           >
         </Link>
       </div>
-    </section>
+    </section> -->
   </section>
 </Layout>

@@ -1,61 +1,71 @@
 import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
-  title: 'Cojocaru David',
+  title: 'Yoann GUION',
   description:
     "Junior Full Stack Developer specializing in modern web technologies. Expert in React, Node.js, TypeScript, and cloud development. Read my latest tech tutorials, project insights, and programming tips on web development, DevOps, and software engineering best practices.",
-  href: 'https://www.cojocarudavid.me',
-  author: 'Cojocaru David',
-  locale: 'en-US',
-  location: 'Romania',
-  email: 'contact@cojocarudavid.me'
+  href: 'https://yoannguion.com',
+  author: 'Yoann Guion',
+  locale: 'fr-FR',
+  location: 'France',
+  email: 'yoann'
 }
 
 export const NAV_LINKS: SocialLink[] = [
   {
     href: '/',
-    label: 'home',
+    label: 'accueil',
   },
   {
-    href: '/projects',
-    label: 'projects',
+    href: '/projets',
+    label: 'projets',
   },
   {
-    href: '/blog',
-    label: 'blog',
+    href: '/a-propos',
+    label: 'à propos',
   },
+  // {
+  //   href: '/blog',
+  //   label: 'blog',
+  // },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: 'https://github.com/cojocaru-david?ref=personal-website',
+    href: 'https://github.com/Yoann-Guion',
     label: 'GitHub',
   },
   {
-    href: 'mailto:contact@cojocarudavid.me',
+    href: 'https://www.linkedin.com/in/yoann-guion/',
+    label: 'LinkedIn',
+  },
+  {
+    href: 'mailto:yoannguion@ik.com',
     label: 'Email',
   },
   {
-    href: 'tel:+40764132266',
-    label: 'Phone',
+    href: 'https://app.daily.dev/ptiyo',
+    label: 'DailyDev',
   },
-  {
-    href: 'https://www.instagram.com/david._.cojo?ref=personal-website',
-    label: 'Instagram',
-  },
-  {
-    href: '/rss.xml',
-    label: 'RSS',
-  },
+  // {
+  //   href: 'tel:+33',
+  //   label: 'Phone',
+  // },
+  // {
+  //   href: '/rss.xml',
+  //   label: 'RSS',
+  // },
 ]
 
 export const ICON_MAP: IconMap = {
-  Website: 'lucide:globe',
+  DailyDev: 'lucide:code',
+  Email: 'lucide:mail',
   GitHub: 'lucide:github',
   Instagram: 'lucide:instagram',
+  LinkedIn: 'lucide:linkedin',
   Phone: 'lucide:phone',
-  Email: 'lucide:mail',
   RSS: 'lucide:rss',
+  Website: 'lucide:globe',
 }
 
 export interface Category {
@@ -88,7 +98,7 @@ export const technologies: Technologies = {
     { text: 'Git', logo: 'mdi:git' },
   ],
   'Hosting and Cloud Services': [
-    { text: 'DigitalOcean', logo: 'mdi:digital-ocean' },
+    { text: 'Vercel', logo: 'mdi:vercel' },
     { text: 'Cloudflare', logo: 'cib:cloudflare' },
     { text: 'Netlify', logo: 'cib:netlify' },
   ],
@@ -113,6 +123,6 @@ export const technologies: Technologies = {
     { text: 'Discord', logo: 'mdi:discord' },
     { text: 'Spotify', logo: 'mdi:spotify' },
     { text: 'Visual Studio', logo: 'mdi:visual-studio' },
-    { text: 'Brave', logo: 'cib:brave' },
+    { text: 'Firefox', logo: 'cib:firefox' },
   ],
 }

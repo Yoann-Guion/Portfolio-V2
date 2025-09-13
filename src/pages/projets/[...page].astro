@@ -27,7 +27,7 @@ const currentUrl = Astro.url;
   <PageHead slot="head" title="Projects" />
   <Breadcrumbs
     items={[
-      { label: 'Projects', href: '/projects', icon: 'lucide:folder' },
+      { label: 'Projets', href: '/projets', icon: 'lucide:folder-open-dot' },
     ]}
   />
 
@@ -36,20 +36,20 @@ const currentUrl = Astro.url;
       <div>
           <div class="flex w-fit items-center gap-2 text-primary">
             <Icon name="lucide:star" class="h-4 w-4 text-yellow-500 animate-pulse" />
-            <p class="shimmer word-spacing font-mono text-sm uppercase leading-none text-primary">My Work</p>
+            <p class="shimmer word-spacing font-mono text-sm uppercase leading-none text-primary">Mes Projets</p>
           </div>
           <h2
             id="skills-title"
             class="font-custom text-foreground text-4xl font-bold mt-2"
           >
-            Projects
+           Mes Projets
           </h2>
           <p class="text-muted-foreground text-md max-w-2xl mt-3">
-            Here are some of the projects I have worked on. I am always looking for new challenges and opportunities to learn and grow as a developer. If you have a project in mind, feel free to reach out!
+            Voici quelques-uns des projets sur lesquels j'ai travaillé. Je suis toujours à la recherche de nouveaux défis et d'opportunités pour apprendre et grandir en tant que développeur. Si vous avez un projet en tête, n'hésitez pas à me contacter !
           </p>
       </div>
       <div>
-        <BuyMeCoffee />
+        <!-- <BuyMeCoffee /> -->
       </div>  
     </div>
   
