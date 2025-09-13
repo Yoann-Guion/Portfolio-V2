@@ -88,6 +88,9 @@ export const technologies: Technologies = {
   'Web Development': [
     { text: 'HTML', logo: 'mdi:language-html5' },
     { text: 'JavaScript', logo: 'mdi:language-javascript' },
+    { text: 'TypeScript', logo: 'mdi:language-typescript' },
+    { text: 'React', logo: 'mdi:react' },
+    { text: 'Next.js', logo: 'simple-icons:nextdotjs' },
     { text: 'CSS', logo: 'mdi:language-css3' },
     { text: 'PHP', logo: 'mdi:language-php' },
     { text: 'Astro', logo: 'simple-icons:astro' },
@@ -96,19 +99,18 @@ export const technologies: Technologies = {
   'Development Tools': [
     { text: 'Visual Studio Code', logo: 'mdi:visual-studio-code' },
     { text: 'Git', logo: 'mdi:git' },
+    { text: 'GitHub', logo: 'mdi:github' },
   ],
   'Hosting and Cloud Services': [
     { text: 'Vercel', logo: 'mdi:vercel' },
-    { text: 'Cloudflare', logo: 'cib:cloudflare' },
     { text: 'Netlify', logo: 'cib:netlify' },
+    { text: 'Cloudflare', logo: 'cib:cloudflare' },
   ],
   'Operating Systems': [
     { text: 'Windows', logo: 'mdi:windows' },
     { text: 'Ubuntu', logo: 'mdi:ubuntu' },
   ],
   'Other Programming Languages and Technologies': [
-    { text: 'Lua', logo: 'mdi:language-lua' },
-    { text: 'Golang', logo: 'mdi:language-go' },
     { text: 'Node.js', logo: 'mdi:nodejs' },
   ],
   'Web Servers': [
