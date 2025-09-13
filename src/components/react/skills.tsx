@@ -2,10 +2,11 @@ import { useEffect } from 'react'
 import { technologies, type Technologies, type Category } from '../../consts'
 import { InfiniteScroll } from '../ui/infinite-scroll'
 import { type IconType } from 'react-icons'
-import { FaQuestionCircle } from 'react-icons/fa'
+import { FaQuestionCircle, FaSass } from 'react-icons/fa'
 import {
   SiHtml5,
   SiJavascript,
+  SiTypescript,
   SiCss3,
   SiPhp,
   SiAstro,
@@ -20,33 +21,60 @@ import {
   SiMysql,
   SiMongodb,
   SiDiscord,
-  SiSpotify,
   SiBrave,
+  SiGithub,
+  SiVercel,
+  SiFirefoxbrowser,
+  SiReact,
+  SiGooglechrome,
+  SiZod,
+  SiRedux,
+  SiSymfony,
+  SiDocker,
+  SiJest,
+  SiExpress
 } from 'react-icons/si'
 import { FileCode, LucideAppWindow, Code } from 'lucide-react'
+import { RiNextjsFill } from "react-icons/ri";
+import { GiPolarBear } from "react-icons/gi";
 
 const iconMap: { [key: string]: IconType } = {
-  'mdi:language-html5': SiHtml5,
-  'mdi:language-javascript': SiJavascript,
-  'mdi:language-css3': SiCss3,
-  'mdi:language-php': SiPhp,
-  'simple-icons:astro': SiAstro,
-  'mdi:tailwind': SiTailwindcss,
-  'mdi:git': SiGit,
-  'cib:cloudflare': SiCloudflare,
-  'cib:netlify': SiNetlify,
-  'mdi:ubuntu': SiUbuntu,
-  'mdi:nodejs': SiNodedotjs,
-  'cib:apache': SiApache,
-  'cib:nginx': SiNginx,
-  'cib:mysql': SiMysql,
-  'cib:mongodb': SiMongodb,
-  'mdi:discord': SiDiscord,
-  'mdi:spotify': SiSpotify,
-  'cib:brave': SiBrave,
-  'mdi:visual-studio-code': FileCode,
-  'mdi:windows': LucideAppWindow,
-  'mdi:visual-studio': Code,
+  'apache': SiApache,
+  'astro': SiAstro,
+  'brave': SiBrave,
+  'cloudflare': SiCloudflare,
+  'css3': SiCss3,
+  'discord': SiDiscord,
+  'docker': SiDocker,
+  'express': SiExpress,
+  'firefox': SiFirefoxbrowser,
+  'git': SiGit,
+  'github': SiGithub,
+  'google-chrome': SiGooglechrome,
+  'html5': SiHtml5,
+  'javascript': SiJavascript,
+  'jest': SiJest,
+  'mongodb': SiMongodb,
+  'mysql': SiMysql,
+  'netlify': SiNetlify,
+  'nextjs': RiNextjsFill,
+  'nginx': SiNginx,
+  'nodejs': SiNodedotjs,
+  'php': SiPhp,
+  'react': SiReact,
+  'redux': SiRedux,
+  'sass': FaSass,
+  'symfony': SiSymfony,
+  'tailwind': SiTailwindcss,
+  'typescript': SiTypescript,
+  'ubuntu': SiUbuntu,
+  'vercel': SiVercel,
+  'visual-studio-code': FileCode,
+  'visual-studio': Code,
+  'windows': LucideAppWindow,
+  'zod': SiZod,
+  'zustand': GiPolarBear
+
 }
 
 const categories = Object.keys(technologies)

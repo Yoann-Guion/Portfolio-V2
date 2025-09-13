@@ -75,6 +75,7 @@ export interface Category {
 
 export type Technologies = {
   'Web Development': Category[]
+  'Frameworks and Libraries': Category[]
   'Development Tools': Category[]
   'Hosting and Cloud Services': Category[]
   'Operating Systems': Category[]
@@ -86,45 +87,54 @@ export type Technologies = {
 
 export const technologies: Technologies = {
   'Web Development': [
-    { text: 'HTML', logo: 'mdi:language-html5' },
-    { text: 'JavaScript', logo: 'mdi:language-javascript' },
-    { text: 'TypeScript', logo: 'mdi:language-typescript' },
-    { text: 'React', logo: 'mdi:react' },
-    { text: 'Next.js', logo: 'simple-icons:nextdotjs' },
-    { text: 'CSS', logo: 'mdi:language-css3' },
-    { text: 'PHP', logo: 'mdi:language-php' },
-    { text: 'Astro', logo: 'simple-icons:astro' },
-    { text: 'Tailwind CSS', logo: 'mdi:tailwind' },
+    { text: 'HTML', logo: 'html5' },
+    { text: 'JavaScript', logo: 'javascript' },
+    { text: 'TypeScript', logo: 'typescript' },
+    { text: 'CSS', logo: 'css3' },
+    { text: 'Sass', logo: 'sass' },
+    { text: 'Node.js', logo: 'nodejs' },
+    { text: 'PHP', logo: 'php' },
+  ],
+  'Frameworks and Libraries': [
+    { text: 'React', logo: 'react' },
+    { text: 'Next.js', logo: 'nextjs' },
+    { text: 'Tailwind CSS', logo: 'tailwind' },
+    { text: 'Zod', logo: 'zod' },
+    { text: 'Redux', logo: 'redux' },
+    { text: 'Zustand', logo: 'zustand' },
+    { text: 'Express', logo: 'express' },
+    { text: 'Astro', logo: 'astro' },
+    { text: 'Symfony', logo: 'symfony' },
   ],
   'Development Tools': [
-    { text: 'Visual Studio Code', logo: 'mdi:visual-studio-code' },
-    { text: 'Git', logo: 'mdi:git' },
-    { text: 'GitHub', logo: 'mdi:github' },
+    { text: 'Visual Studio Code', logo: 'visual-studio-code' },
+    { text: 'Git', logo: 'git' },
+    { text: 'GitHub', logo: 'github' },
+    { text: 'Jest', logo: 'jest' },
+    { text: 'Docker', logo: 'docker' },
   ],
   'Hosting and Cloud Services': [
-    { text: 'Vercel', logo: 'mdi:vercel' },
-    { text: 'Netlify', logo: 'cib:netlify' },
-    { text: 'Cloudflare', logo: 'cib:cloudflare' },
+    { text: 'Vercel', logo: 'vercel' },
+    { text: 'Netlify', logo: 'netlify' },
+    { text: 'Cloudflare', logo: 'cloudflare' },
   ],
   'Operating Systems': [
-    { text: 'Windows', logo: 'mdi:windows' },
-    { text: 'Ubuntu', logo: 'mdi:ubuntu' },
+    { text: 'Windows', logo: 'windows' },
+    { text: 'Ubuntu', logo: 'ubuntu' },
   ],
   'Other Programming Languages and Technologies': [
-    { text: 'Node.js', logo: 'mdi:nodejs' },
   ],
   'Web Servers': [
-    { text: 'Apache', logo: 'cib:apache' },
-    { text: 'Nginx', logo: 'cib:nginx' },
+    { text: 'Apache', logo: 'apache' },
+    { text: 'Nginx', logo: 'nginx' },
   ],
   Databases: [
-    { text: 'MySQL', logo: 'cib:mysql' },
-    { text: 'MongoDB', logo: 'cib:mongodb' },
+    { text: 'MySQL', logo: 'mysql' },
+    { text: 'MongoDB', logo: 'mongodb' },
   ],
   'Other Software': [
-    { text: 'Discord', logo: 'mdi:discord' },
-    { text: 'Spotify', logo: 'mdi:spotify' },
-    { text: 'Visual Studio', logo: 'mdi:visual-studio' },
-    { text: 'Firefox', logo: 'cib:firefox' },
+    { text: 'Discord', logo: 'discord' },
+    { text: 'Firefox', logo: 'firefox' },
+    { text: 'Chrome', logo: 'google-chrome' },
   ],
 }
