@@ -32,7 +32,8 @@ import {
   SiSymfony,
   SiDocker,
   SiJest,
-  SiExpress
+  SiExpress,
+  SiDailydotdev
 } from 'react-icons/si'
 import { FileCode, LucideAppWindow, Code } from 'lucide-react'
 import { RiNextjsFill } from "react-icons/ri";
@@ -44,6 +45,7 @@ const iconMap: { [key: string]: IconType } = {
   'brave': SiBrave,
   'cloudflare': SiCloudflare,
   'css3': SiCss3,
+  'dailydotdev': SiDailydotdev,
   'discord': SiDiscord,
   'docker': SiDocker,
   'express': SiExpress,

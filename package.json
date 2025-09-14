@@ -12,13 +12,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cojocaru-david/portfolio.git"
+    "url": "https://github.com/Yoann-Guion/Portfolio-V2"
   },
   "bugs": {
-    "url": "https://github.com/cojocaru-david/portfolio/issues"
+    "url": "https://github.com/Yoann-Guion/Portfolio-V2/issues"
   },
-  "homepage": "https://cojocarudavid.me",
-  "name": "cojocarudavid.me",
+  "homepage": "https://yoannguion.com",
+  "name": "yoannguion.com",
   "type": "module",
   "version": "1.1.0",
   "private": false,

@@ -50,7 +50,7 @@ const currentUrl = Astro.url;
     <div class="col-start-2">
       <Breadcrumbs
         items={[
-          { href: '/projects', label: 'Projects', icon: 'lucide:folder' },
+          { href: '/projects', label: 'Projets', icon: 'lucide:folder' },
           { label: project.data.name, icon: 'lucide:folder-open' },
         ]}
       />
@@ -104,7 +104,7 @@ const currentUrl = Astro.url;
     <aside
     class="group col-start-2 rounded-xl border p-4 xl:sticky xl:top-26 xl:col-start-3 xl:mr-auto xl:ml-8 xl:h-[calc(100vh-5rem)] xl:max-w-fit xl:rounded-none xl:border-none xl:p-0"
   >
-    <div class="flex flex-col gap-4 rounded-xl border bg-card p-4 shadow-md transition-all duration-300 group-hover:shadow-lg xl:group-hover:shadow-none xl:group-hover:shadow-none">
+    <div class="flex flex-col gap-4 rounded-xl border bg-card p-4 shadow-md transition-all duration-300 group-hover:shadow-lg xl:group-hover:shadow-none">
       <h2 class="text-lg font-semibold">Project Details</h2>
       <div class="flex flex-col gap-2 text-sm text-muted-foreground">
         <p>{project.data.description}</p>
