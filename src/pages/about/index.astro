@@ -1,0 +1,90 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import TableOfContents from '@/components/TableOfContents.astro'
+import Layout from '@/layouts/Layout.astro'
+import PageHead from '@/components/PageHead.astro'
+const currentUrl = Astro.url;
+
+// Générer un slug simple à partir du texte
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/[\sàáâäæãåā]/g, '-')
+    .replace(/[ëéèêěėē]/g, 'e')    
+    .replace(/[îïíīįì]/g, 'i')
+    .replace(/[ôöòóœøōõ]/g, 'o')
+    .replace(/[üúùū]/g, 'u')
+    .replace(/[^a-z0-9-]/g, '')  
+}
+
+const headings = [
+  { depth: 2, text: "Mon parcours", slug: slugify("Mon parcours") },
+  { depth: 2, text: "Compétences maîtrisées", slug: slugify("Compétences maîtrisées") },
+  { depth: 2, text: "Expériences", slug: slugify("Expériences") },
+  { depth: 2, text: "Formations", slug: slugify("Formations") },
+  { depth: 2, text: "CV", slug: slugify("CV") },
+];
+---
+
+
+
+<Layout canonicalUrl={currentUrl} isWide={true}>
+  <PageHead slot="head" title="À propos de moi" />
+  <section class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-2rem),100%)_minmax(0px,1fr)] gap-y-6 max-w-[calc(100vw-2rem)] ">
+
+    <div class="col-start-2">
+      <Breadcrumbs
+        items={[
+          { label: 'À propos', icon: 'lucide:user' }
+        ]}
+      />
+    </div>
+
+    <TableOfContents headings={headings} />
+
+
+    <!-- Bloc principal -->
+    <section class="col-start-2 flex flex-col gap-y-8 text-start">
+
+      <!-- Parcours -->
+      <section id="parcours" class="mb-8">
+        <h1 class="mb-2 text-3xl font-medium">Mon parcours</h1>
+        <p>// Texte d'introduction sur ton évolution</p>
+      </section>
+
+      <!-- Compétences maîtrisées -->
+      <section id="competences" class="mb-8">
+        <h2 class="mb-2 text-2xl font-medium">Compétences maîtrisées</h2>
+        <ul class="flex flex-wrap gap-2">
+          <!-- Remplis ensuite avec tes badges, icônes, tags -->
+        </ul>
+      </section>
+
+      <!-- Expériences -->
+      <section id="experiences" class="mb-8">
+        <h2 class="mb-2 text-2xl font-medium">Expériences</h2>
+        <div>
+          <!-- Timeline ou cartes expériences pro -->
+        </div>
+      </section>
+
+      <!-- Formations -->
+      <section id="formations" class="mb-8">
+        <h2 class="mb-2 text-2xl font-medium">Formations</h2>
+        <div>
+          <!-- Liste ou cartes de tes formations -->
+        </div>
+      </section>
+
+      <!-- CV -->
+      <section id="cv" class="mb-8 flex flex-col items-start">
+        <h2 class="mb-2 text-2xl font-medium">CV</h2>
+        <a href="/CVYoannGUION2025Fullstack.pdf" class="inline-block px-4 py-2 rounded bg-primary text-primary-foreground hover:bg-primary/90 transition"
+           download>
+          Télécharger mon CV
+        </a>
+      </section>
+
+    </section>
+  </section>
+</Layout>
