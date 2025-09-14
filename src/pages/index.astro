@@ -1,16 +1,19 @@
 ---
 import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
+import ProjectCardJSX from '@/components/react/project-card'
 import BlogCard from '@/components/react/blog-card'
 import Skills from '@/components/react/skills'
 import { buttonVariants } from '@/components/ui/button'
 import Logo from '@/components/ui/logo'
 import Layout from '@/layouts/Layout.astro'
-import { getRecentPosts } from '@/lib/data-utils'
+import { getAllProjects, getRecentPosts } from '@/lib/data-utils'
 import { SITE } from '@/consts'
 import Image from 'astro/components/Image.astro'
 
-const blog = await getRecentPosts(3)
+const blog = await getRecentPosts(3);
+const allProjects = await getAllProjects()
+const latestProjects = allProjects.slice(0, 3);
 const currentUrl = Astro.url;
 ---
 
@@ -70,13 +73,47 @@ const currentUrl = Astro.url;
         Skills & Technologies
       </h2>
       <p class="text-muted-foreground text-sm" aria-label="skills description">
-        Here are some of the technologies I've been working with:
+        Voici un aperçu de mes compétences et des technologies que je maîtrise :
       </p>
       <div>
         <Skills client:load />
       </div>
     </section>
 
+    <!-- PROJECT SECTION -->
+     <section class="flex flex-col gap-y-4" aria-labelledby="latest-projects-title" role="region">
+  <div class="relative" aria-labelledby="latest-projects-title">
+    <h2
+      id="latest-projects-title"
+      class="font-custom text-foreground text-2xl font-bold"
+      title="Latest Projects"
+      aria-label="Latest Projects"
+    >
+      Mes derniers projets
+    </h2>
+    <p class="text-muted-foreground text-sm" aria-label="projects description">
+      Voici quelques-uns de mes derniers projets. Vous pouvez en trouver plus sur la <Link href="/projects" class="underline">page des projets</Link>.
+    </p>
+  </div>
+  <ul class="flex flex-col gap-y-4">
+    {
+      latestProjects.map((project) => (
+        <li>
+          <ProjectCardJSX entry={project} />
+        </li>
+      ))
+    }
+  </ul>
+  <div class="flex justify-center" aria-label="see all projects">
+    <Link
+      href="/projects"
+      class={buttonVariants({ variant: 'ghost' }) + ' group'}
+    >
+      Voir tous les projets
+      <span class="ml-1.5 transition-transform group-hover:translate-x-1">&rarr;</span>
+    </Link>
+  </div>
+</section>
 
     <!-- BLOG SECTION -->
     <!-- <section class="flex flex-col gap-y-4" aria-labelledby="latest-posts-title" role="region">
