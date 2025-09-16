@@ -29,4 +29,24 @@ const projects = defineCollection({
     }),
 })
 
-export const collections = { blog, projects }
+const about = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/about' }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string().optional(),
+      subtitle: z.string().optional(),
+      description: z.string().optional(),
+      name: z.string().optional(),
+      updatedDate: z.coerce.date().optional(),
+      image: image().optional(), // Comme dans votre collection blog
+      skills: z.array(z.string()).optional(),
+      contact: z.object({
+        email: z.string().optional(),
+        linkedin: z.string().optional(),
+        github: z.string().optional(),
+      }).optional(),
+    }),
+})
+
+
+export const collections = { blog, projects, about }

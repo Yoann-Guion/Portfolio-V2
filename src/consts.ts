@@ -3,7 +3,7 @@ import type { IconMap, SocialLink, Site } from '@/types'
 export const SITE: Site = {
   title: 'Yoann GUION',
   description:
-    "Junior Full Stack Developer specializing in modern web technologies. Expert in React, Node.js, TypeScript, and cloud development. Read my latest tech tutorials, project insights, and programming tips on web development, DevOps, and software engineering best practices.",
+    "Développeur web junior spécialisé en React/Next.js, je crée des applications modernes, claires et orientées utilisateur. J’explore également le back-end avec Node.js et Symfony afin de concevoir des projets complets et bien structurés.",
   href: 'https://yoannguion.com',
   author: 'Yoann Guion',
   locale: 'fr-FR',

@@ -1,7 +1,7 @@
 ---
 name: 'AriMayi'
 description: 'Plateforme de mise en relation entre étudiants et formateurs'
-tags: ['react', 'next.js', 'tailwindcss', 'typescript', 'zustand', 'zod']
+tags: ['react', 'next.js', 'typescript', 'css-in-js', 'redux', 'docker', 'jest', 'react testing library']
 image: '../../../public/static/arimayi.webp'
 link: 'https://arimayi-site-vitrine.vercel.app/'
 startDate: '2024-12-03'

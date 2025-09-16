@@ -1,90 +1,139 @@
 ---
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import PageHead from '@/components/PageHead.astro'
 import TableOfContents from '@/components/TableOfContents.astro'
 import Layout from '@/layouts/Layout.astro'
-import PageHead from '@/components/PageHead.astro'
-const currentUrl = Astro.url;
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import { getEntry, render } from 'astro:content'
 
-// Générer un slug simple à partir du texte
-function slugify(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/[\sàáâäæãåā]/g, '-')
-    .replace(/[ëéèêěėē]/g, 'e')    
-    .replace(/[îïíīįì]/g, 'i')
-    .replace(/[ôöòóœøōõ]/g, 'o')
-    .replace(/[üúùū]/g, 'u')
-    .replace(/[^a-z0-9-]/g, '')  
+// Recover the about page content
+const aboutEntry = await getEntry('about', 'index')
+
+if (!aboutEntry) {
+  throw new Error('About page content not found')
 }
 
-const headings = [
-  { depth: 2, text: "Mon parcours", slug: slugify("Mon parcours") },
-  { depth: 2, text: "Compétences maîtrisées", slug: slugify("Compétences maîtrisées") },
-  { depth: 2, text: "Expériences", slug: slugify("Expériences") },
-  { depth: 2, text: "Formations", slug: slugify("Formations") },
-  { depth: 2, text: "CV", slug: slugify("CV") },
-];
+const { Content, headings } = await render(aboutEntry)
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  headline: aboutEntry.data.title || 'À propos',
+  dateModified: aboutEntry.data.updatedDate || new Date().toISOString(),
+  author: {
+    '@type': 'Person',
+    name: aboutEntry.data.name || 'Votre nom',
+  },
+  description: aboutEntry.data.description || 'Page à propos',
+}
+
+const currentUrl = Astro.url
 ---
 
-
-
 <Layout canonicalUrl={currentUrl} isWide={true}>
-  <PageHead slot="head" title="À propos de moi" />
-  <section class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-2rem),100%)_minmax(0px,1fr)] gap-y-6 max-w-[calc(100vw-2rem)] ">
-
+  <PageHead slot="head" title={aboutEntry.data.title || 'À propos'} />
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(structuredData)}
+  />
+  
+  <section
+    class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-2rem),100%)_minmax(0px,1fr)] gap-y-6 max-w-[calc(100vw-2rem)]"
+  >
     <div class="col-start-2">
       <Breadcrumbs
         items={[
-          { label: 'À propos', icon: 'lucide:user' }
+          { label: 'À propos', href: '/about', icon: 'lucide:user' },
         ]}
       />
     </div>
 
-    <TableOfContents headings={headings} />
-
-
-    <!-- Bloc principal -->
-    <section class="col-start-2 flex flex-col gap-y-8 text-start">
-
-      <!-- Parcours -->
-      <section id="parcours" class="mb-8">
-        <h1 class="mb-2 text-2xl font-medium">Mon parcours</h1>
-        <p></p>
-      </section>
-
-      <!-- Compétences maîtrisées -->
-      <section id="competences" class="mb-8">
-        <h2 class="mb-2 text-2xl font-medium">Compétences maîtrisées</h2>
-        <ul class="flex flex-wrap gap-2">
-          <!-- Remplis ensuite avec tes badges, icônes, tags -->
-        </ul>
-      </section>
-
-      <!-- Expériences -->
-      <section id="experiences" class="mb-8">
-        <h2 class="mb-2 text-2xl font-medium">Expériences</h2>
-        <div>
-          <!-- Timeline ou cartes expériences pro -->
+    <section class="col-start-2 flex flex-col gap-y-6 text-start">
+      <div class="flex flex-col">
+        <div class="flex w-fit items-center gap-2 text-primary mb-4">
+          <Icon name="lucide:star" class="h-4 w-4 text-yellow-500 animate-pulse" />
+          <p class="shimmer word-spacing font-mono text-sm uppercase leading-none text-primary">
+            {aboutEntry.data.subtitle || 'Mon parcours'}
+          </p>
         </div>
-      </section>
+        
+        <h1 class="mb-2 text-3xl leading-tight font-medium text-pretty sm:text-5xl font-custom text-foreground">
+          {aboutEntry.data.title || 'À propos de moi'}
+        </h1>
 
-      <!-- Formations -->
-      <section id="formations" class="mb-8">
-        <h2 class="mb-2 text-2xl font-medium">Formations</h2>
-        <div>
-          <!-- Liste ou cartes de tes formations -->
-        </div>
-      </section>
-
-      <!-- CV -->
-      <section id="cv" class="mb-8 flex flex-col items-start">
-        <h2 class="mb-2 text-2xl font-medium">CV</h2>
-        <a href="/CVYoannGUION2025Fullstack.pdf" class="inline-block px-4 py-2 rounded bg-primary text-primary-foreground hover:bg-primary/90 transition"
-           download>
-          Télécharger mon CV
-        </a>
-      </section>
-
+        {aboutEntry.data.description && (
+          <p class="text-muted-foreground text-md max-w-2xl mt-3">
+            {aboutEntry.data.description}
+          </p>
+        )}
+      </div>
     </section>
+
+    {aboutEntry.data.image && (
+      <Image
+        src={aboutEntry.data.image}
+        alt={aboutEntry.data.title || 'À propos'}
+        class="col-start-2 mb-8 h-[500px] w-full rounded-3xl object-cover"
+        loading="lazy"
+        fetchpriority="low"      
+        width={1200}
+        height={800}
+      />
+    )}
+
+    {headings.length > 0 && <TableOfContents headings={headings} />}
+
+    <article class="prose col-start-2 max-w-none" aria-label="About content">
+      <Content />
+    </article>
+
+    {aboutEntry.data.skills && (
+      <aside class="group col-start-2 rounded-xl border p-4 xl:sticky xl:top-26 xl:col-start-3 xl:mr-auto xl:ml-8 xl:h-[calc(100vh-5rem)] xl:max-w-fit xl:rounded-none xl:border-none xl:p-0">
+        <div class="flex flex-col gap-4 rounded-xl border bg-card p-4 shadow-md transition-all duration-300 group-hover:shadow-lg xl:group-hover:shadow-none">
+          <h2 class="text-lg font-semibold">Compétences</h2>
+          <div class="flex flex-wrap gap-2">
+            {aboutEntry.data.skills.map((skill) => (
+              <span class="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          {aboutEntry.data.contact && (
+            <>
+              <hr class="my-4 border-t" />
+              <div class="flex flex-col gap-2 text-sm text-muted-foreground">
+                <h3 class="text-base font-semibold">Contact</h3>
+                <ul class="list-disc pl-4">
+                  {aboutEntry.data.contact.email && (
+                    <li>
+                      <a href={`mailto:${aboutEntry.data.contact.email}`} aria-label="Email">
+                        {aboutEntry.data.contact.email}
+                      </a>
+                    </li>
+                  )}
+                  {aboutEntry.data.contact.linkedin && (
+                    <li>
+                      <a href={aboutEntry.data.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        LinkedIn
+                      </a>
+                    </li>
+                  )}
+                  {aboutEntry.data.contact.github && (
+                    <li>
+                      <a href={aboutEntry.data.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        GitHub
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </div>
+            </>
+          )}
+        </div>
+      </aside>
+    )}
   </section>
 </Layout>
