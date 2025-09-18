@@ -66,7 +66,7 @@ function Search({ searchList, initialPosts }) {
           htmlFor="search"
           className="text-foreground mb-2 block text-sm font-medium dark:text-white"
         >
-          Search
+          Recherche
         </label>
         <Input
           type="text"
@@ -76,13 +76,19 @@ function Search({ searchList, initialPosts }) {
           id="search"
           autoComplete="off"
           autoCorrect="off"
-          placeholder="Search posts"
+          placeholder="Rechercher des articles"
           className="w-full outline-none focus:ring-0 dark:bg-neutral-900 dark:text-white"
         />
       </div>
 
       <hr className="my-6 border-neutral-200 dark:border-neutral-700" />
-      <div className={cn('flex items-center justify-between', 'mb-4', !query && 'hidden')}>
+      <div
+        className={cn(
+          'flex items-center justify-between',
+          'mb-4',
+          !query && 'hidden',
+        )}
+      >
         <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
           {filteredPosts.length} posts found
         </h2>

@@ -3,7 +3,7 @@ title: "À propos de moi"
 subtitle: "Mon parcours"
 description: "Développeur web junior passionné par les nouvelles technologies et en constante évolution."
 name: "Yoann Guion"
-image: "../../../public/static/YG-paysage.jpg"
+image: "../../../public/img/YG-paysage.webp"
 updatedDate: 2025-01-20
 skills: 
   - "TypeScript"
