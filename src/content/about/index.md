@@ -208,16 +208,18 @@ Formation technique combinant mécanique, automatisation et programmation indust
 
 Vous souhaitez approfondir votre connaissance de mon profil ?
 
-- 📋 [Télécharger mon CV classique (PDF)](#) - Format traditionnel pour candidatures formelles
-- 🎨 [Télécharger mon CV optimisé ATS (PDF)](#) - Version optimisée pour les systèmes de recrutement automatisés
+![CV de Yoann Guion](/public/static/cv/CV-YoannGUION.webp)
+
+- 🎨 [Télécharger mon CV classique (PDF)](/public/static/cv/CVYoannGUION2025Fullstack.pdf) - Format traditionnel pour candidatures formelles
+- 📋 [Télécharger mon CV optimisé ATS (PDF)](/public/static/cv/CVYoannGUION2025FS-ATS.pdf) - Version optimisée pour les systèmes de recrutement automatisés
 
 ---
 
 ## 📬 Contact
 
-**📧 Email :** [yoann.guion@mail.com](mailto:yoann.guion@mail.com)  
-**💼 LinkedIn :** [linkedin.com/in/yoannguion](https://linkedin.com/in/yoann-guion)  
-**💻 GitHub :** [github.com/yoannguion](https://github.com/Yoann-Guion)
+**📧 Email :** [yoann.guion[@]mail.com](mailto:yoann.guion@mail.com)  
+**💼 LinkedIn :** [linkedin.com/in/yoann-guion](https://linkedin.com/in/yoann-guion)  
+**💻 GitHub :** [github.com/Yoann-Guion](https://github.com/Yoann-Guion)
 
 📍 Basé en banlieue bordelaise, disponible dans toute la métropole et ses environs.
 
