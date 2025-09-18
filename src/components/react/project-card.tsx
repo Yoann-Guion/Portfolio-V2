@@ -10,35 +10,46 @@ const ProjectCardJSX = ({ entry }: { entry: CollectionEntry<'projects'> }) => {
         className="flex flex-col gap-4 sm:flex-row"
         aria-label={`Lien vers le projet ${entry.data.name}`}
       >
-        <div className="shrink-0 w-full sm:w-40 h-28 rounded-md overflow-hidden">
+        <div className="h-28 w-full shrink-0 overflow-hidden rounded-md sm:w-40">
           <img
             src={entry.data.image.src}
             alt={entry.data.name}
-            className="object-cover w-full h-full"
+            className="h-full w-full object-cover"
             loading="lazy"
             width={160}
             height={112}
           />
         </div>
 
-        <div className="grow flex flex-col justify-between">
-          <h3 className="mb-1 text-lg font-medium text-foreground">{entry.data.name}</h3>
-          <p className="text-muted-foreground mb-2 text-sm line-clamp-3">
+        <div className="flex grow flex-col justify-between">
+          <h3 className="text-foreground mb-1 text-lg font-medium">
+            {entry.data.name}
+          </h3>
+          <p className="text-muted-foreground mb-2 line-clamp-3 text-sm">
             {entry.data.description || 'Description à venir...'}
           </p>
 
           {entry.data.tags && (
             <div className="flex flex-wrap gap-2">
-              {entry.data.tags.map((tag, index) => (
+              {entry.data.tags.slice(0, 4).map((tag, index) => (
                 <Badge
                   key={index}
                   variant="secondary"
                   className="flex items-center gap-x-1"
                 >
                   <Hash size={12} />
+
                   {tag}
                 </Badge>
               ))}
+              {entry.data.tags.length > 4 && (
+                <Badge
+                  variant="secondary"
+                  className="flex items-center gap-x-1"
+                >
+                  +{entry.data.tags.length - 4}
+                </Badge>
+              )}
             </div>
           )}
         </div>
