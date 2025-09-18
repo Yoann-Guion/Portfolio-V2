@@ -5,11 +5,9 @@ import ProjectCardJSX from '@/components/react/project-card'
 import BlogCard from '@/components/react/blog-card'
 import Skills from '@/components/react/skills'
 import { buttonVariants } from '@/components/ui/button'
-import Logo from '@/components/ui/logo'
 import Layout from '@/layouts/Layout.astro'
 import { getAllProjects, getRecentPosts } from '@/lib/data-utils'
 import { SITE } from '@/consts'
-import Image from 'astro/components/Image.astro'
 
 const blog = await getRecentPosts(3);
 const allProjects = await getAllProjects()
@@ -25,17 +23,12 @@ const currentUrl = Astro.url;
     <div
       class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left"
     >
-      <div class="relative overflow-hidden rounded-lg sm:shrink-0 sm:overflow-hidden sm:rounded-lg">
-        
+      <div class="relative overflow-hidden rounded-lg w-full px-0 sm:w-auto sm:overflow-hidden sm:rounded-lg sm:px-0">
         <img
           src="/img/YG-1.jpg"
           alt="Photo Yoann Guion"
-          class="rounded-xl w-48 h-64 object-cover mx-auto shadow-lg"
-          />
-          
-        <!-- <Logo
-          className="h-auto w-40 object-cover sm:w-48 md:w-56 lg:w-64 "
-        /> -->
+          class="rounded-xl w-full h-115 sm:w-48 sm:h-64 object-cover shadow-lg"
+        />
       </div>
       <div class="mt-8 sm:mt-0 sm:max-w-xl">
         <h1

@@ -208,10 +208,10 @@ Formation technique combinant mécanique, automatisation et programmation indust
 
 Vous souhaitez approfondir votre connaissance de mon profil ?
 
-![CV de Yoann Guion](/public/static/cv/CV-YoannGUION.webp)
+![CV de Yoann Guion](/static/cv/CV-YoannGUION.webp)
 
-- 🎨 [Télécharger mon CV classique (PDF)](/public/static/cv/CVYoannGUION2025Fullstack.pdf) - Format traditionnel pour candidatures formelles
-- 📋 [Télécharger mon CV optimisé ATS (PDF)](/public/static/cv/CVYoannGUION2025FS-ATS.pdf) - Version optimisée pour les systèmes de recrutement automatisés
+- 🎨 [Télécharger mon CV classique (PDF)](/static/cv/CVYoannGUION2025Fullstack.pdf) - Format traditionnel pour candidatures formelles
+- 📋 [Télécharger mon CV optimisé ATS (PDF)](/static/cv/CVYoannGUION2025FS-ATS.pdf) - Version optimisée pour les systèmes de recrutement automatisés
 
 ---
 

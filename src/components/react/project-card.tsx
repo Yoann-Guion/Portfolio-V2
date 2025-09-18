@@ -10,7 +10,7 @@ const ProjectCardJSX = ({ entry }: { entry: CollectionEntry<'projects'> }) => {
         className="flex flex-col gap-4 sm:flex-row"
         aria-label={`Lien vers le projet ${entry.data.name}`}
       >
-        <div className="h-28 w-full shrink-0 overflow-hidden rounded-md sm:w-40">
+        <div className="h-45 w-full shrink-0 overflow-hidden rounded-md sm:h-28 sm:w-45">
           <img
             src={entry.data.image.src}
             alt={entry.data.name}
