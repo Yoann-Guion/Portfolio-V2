@@ -40,8 +40,9 @@ const currentUrl = Astro.url
   />
   
   <section
-    class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-2rem),100%)_minmax(0px,1fr)] gap-y-6 max-w-[calc(100vw-2rem)]"
-  >
+    class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-2rem),100%)_minmax(0px,1fr)] xl:grid-cols-[200px_minmax(0,1fr)_280px] gap-y-6 max-w-[calc(100vw-2rem)]"
+  >   
+   <!--class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-lg)-2rem),100%)_minmax(0px,1fr)] gap-y-6 max-w-[calc(100vw-2rem)] "  -->
     <div class="col-start-2">
       <Breadcrumbs
         items={[
@@ -55,7 +56,7 @@ const currentUrl = Astro.url
         <div class="flex w-fit items-center gap-2 text-primary mb-4">
           <Icon name="lucide:star" class="h-4 w-4 text-yellow-500 animate-pulse" />
           <p class="shimmer word-spacing font-mono text-sm uppercase leading-none text-primary">
-            {aboutEntry.data.subtitle || 'Mon parcours'}
+            {aboutEntry.data.subtitle || 'Qui suis-je ?'}
           </p>
         </div>
         
@@ -83,34 +84,34 @@ const currentUrl = Astro.url
       />
     )}
 
-    {headings.length > 0 && <TableOfContents headings={headings} />}
-
+    {headings.length > 0 && (
+      <div class="col-start-2 xl:col-start-1">
+        <TableOfContents headings={headings} />
+      </div>
+    )}
+    
     <article class="prose col-start-2 max-w-none" aria-label="About content">
       <Content />
     </article>
 
-    {aboutEntry.data.skills && (
-      <aside class="group col-start-2 rounded-xl border p-4 xl:sticky xl:top-26 xl:col-start-3 xl:mr-auto xl:ml-8 xl:h-[calc(100vh-5rem)] xl:max-w-fit xl:rounded-none xl:border-none xl:p-0">
+      <aside class="group col-start-2 rounded-xl border p-4 m-4 xl:sticky xl:top-26 xl:col-start-3 xl:mr-auto xl:ml-8 xl:h-[calc(100vh-5rem)] xl:max-w-fit xl:rounded-none xl:border-none xl:p-0">          
         <div class="flex flex-col gap-4 rounded-xl border bg-card p-4 shadow-md transition-all duration-300 group-hover:shadow-lg xl:group-hover:shadow-none">
-          <h2 class="text-lg font-semibold">Compétences</h2>
-          <div class="flex flex-wrap gap-2">
-            {aboutEntry.data.skills.map((skill) => (
-              <span class="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
-                {skill}
-              </span>
-            ))}
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">Actuellement en recherche </span>
+          <span class="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">Disponible à Bordeaux</span> 
+          <span class="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">Ouvert aux collaborations</span>
           </div>
 
           {aboutEntry.data.contact && (
             <>
-              <hr class="my-4 border-t" />
+              <hr class="my-2 border-t" />
               <div class="flex flex-col gap-2 text-sm text-muted-foreground">
-                <h3 class="text-base font-semibold">Contact</h3>
+                <h3 class="text-base font-semibold">Contacts</h3>
                 <ul class="list-disc pl-4">
                   {aboutEntry.data.contact.email && (
                     <li>
                       <a href={`mailto:${aboutEntry.data.contact.email}`} aria-label="Email">
-                        {aboutEntry.data.contact.email}
+                        Me contacter par mail
                       </a>
                     </li>
                   )}
@@ -133,7 +134,7 @@ const currentUrl = Astro.url
             </>
           )}
         </div>
+        </div>
       </aside>
-    )}
   </section>
 </Layout>

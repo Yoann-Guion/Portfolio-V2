@@ -1,6 +1,6 @@
 ---
 title: "À propos de moi"
-subtitle: "Mon parcours"
+subtitle: "Qui suis-je ?"
 description: "Développeur web junior passionné par les nouvelles technologies et en constante évolution."
 name: "Yoann Guion"
 image: "../../../public/img/YG-paysage.webp"

@@ -1,6 +1,6 @@
 ---
 name: 'O Jeux de Société'
-description: ''
+description: 'Plateforme communautaire dédiée au partage et à la gestion collaborative de ludothèques et à la critique de jeux de société.'
 tags: ['react', 'next.js', 'tailwindcss', 'typescript', 'redux', 'symfony']
 image: '../../../public/static/OJDS-home.webp'
 link: 'https://ojeuxdesociete.fr/'
