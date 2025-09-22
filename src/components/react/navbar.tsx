@@ -79,8 +79,8 @@ const Navbar = () => {
     0: { width: '100%' },
     1: { width: '90%' },
     2: { width: '80%' },
-    3: { width: '70%' },
-    4: { width: '50%' },
+    3: { width: '75%' },
+    4: { width: '65%' },
   }
 
 
