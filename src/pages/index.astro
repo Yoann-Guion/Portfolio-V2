@@ -37,7 +37,7 @@ const currentUrl = Astro.url;
         >
           {SITE.title}
         </h1>
-        <div class="mt-4 flex items-center gap-2" aria-label="location">
+        <div class="mt-4 flex items-center gap-2" aria-label="localité">
           <span
             class="bg-primary text-primary-foreground ring-primary/30 rounded-full px-3 py-1 text-sm font-medium ring-1"
           >
@@ -118,14 +118,13 @@ const currentUrl = Astro.url;
         <h2
           id="latest-posts-title"
           class="font-custom text-foreground text-2xl font-bold"
-          title="latest blog posts"
-          aria-label="latest blog posts"
+          title="Derniers posts du blog"
+          aria-label="Derniers posts du blog"
         >
-          Latest Blog Posts
+          Derniers posts du blog
         </h2>
-        <p class="text-muted-foreground text-sm" aria-label="blog description">
-          Here are some of my latest blog posts. You can find more on my blog
-          page.
+        <p class="text-muted-foreground text-sm" aria-label="description du blog">
+          Voici quelques-uns de mes derniers posts de blog. Vous pouvez en trouver plus sur mon blog.
         </p>
       </div>
       <ul class="flex flex-col gap-y-4">
@@ -137,12 +136,12 @@ const currentUrl = Astro.url;
           ))
         }
       </ul> -->
-      <!-- <div class="flex justify-center" aria-label="see all posts">
+      <!-- <div class="flex justify-center" aria-label="voir tous les posts">
         <Link
           href="/blog"
           class={buttonVariants({ variant: 'ghost' }) + ' group'}
         >
-          See all posts <span
+          Voir tous les posts <span
             class="ml-1.5 transition-transform group-hover:translate-x-1"
             >&rarr;</span
           >

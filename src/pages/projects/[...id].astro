@@ -101,7 +101,7 @@ const currentUrl = Astro.url;
       </div>
     )}
 
-    <article class="prose col-start-2 max-w-none" aria-label="Project">
+    <article class="prose col-start-2 max-w-none" aria-label="description du projet">
       <Content />
     </article>
 
@@ -120,7 +120,7 @@ const currentUrl = Astro.url;
         <h3 class="text-base font-semibold">Lien(s)</h3>
         <ul class="list-disc pl-4">
           <li>
-            <a href={project.data.link} target="_blank" rel="noopener noreferrer" aria-label="Project link">
+            <a href={project.data.link} target="_blank" rel="noopener noreferrer" aria-label="Lien du projet">
               {project.data.link}
             </a>
           </li>

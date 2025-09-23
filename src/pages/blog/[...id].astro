@@ -107,7 +107,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
 
     {headings.length > 0 && <TableOfContents headings={headings} />}
 
-    <article class="prose col-start-2 max-w-none" aria-label="Blog post">
+    <article class="prose col-start-2 max-w-none" aria-label="Post de blog">
       <Content />
     </article>
 
@@ -120,12 +120,12 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           id="skills-title"
           class="font-custom text-2xl font-bold text-neutral-900 dark:text-white"
         >
-          Share this post
+          Partager ce post
         </h2>
         <p class="text-sm text-neutral-500 dark:text-neutral-400">
-          If you found this post helpful, consider sharing it with your friends
-          or on social media. Your support helps me create more content like
-          this.
+          Si vous avez trouvé ce post utile, envisagez de le partager avec vos amis
+          ou sur les réseaux sociaux. Votre soutien m'aide à créer plus de contenu comme
+          celui-ci.
         </p>
       </div>
 
@@ -134,10 +134,10 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.site + 'blog/' + post.id)}`}
           target="_blank"
           rel="noopener noreferrer"
-          title="Share on Facebook"
-          aria-label="Share on Facebook"
+          title="Partager sur Facebook"
+          aria-label="Partager sur Facebook"
         >
-          <Button variant="outline" size="icon" aria-label="Share on Facebook">
+          <Button variant="outline" size="icon" aria-label="Partager sur Facebook">
             <Icon name="line-md:facebook" class="size-4" />
           </Button>
         </Link>
@@ -145,10 +145,10 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(Astro.site + 'blog/' + post.id)}`}
           target="_blank"
           rel="noopener noreferrer"
-          title="Share on Twitter"
-          aria-label="Share on Twitter"
+          title="Partager sur Twitter"
+          aria-label="Partager sur Twitter"
         >
-          <Button variant="outline" size="icon" aria-label="Share on Twitter">
+          <Button variant="outline" size="icon" aria-label="Partager sur Twitter">
             <Icon name="line-md:twitter" class="size-4" />
           </Button>
         </Link>
@@ -156,10 +156,10 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(Astro.site + 'blog/' + post.id)}`}
           target="_blank"
           rel="noopener noreferrer"
-          title="Share on LinkedIn"
-          aria-label="Share on LinkedIn"
+          title="Partager sur LinkedIn"
+          aria-label="Partager sur LinkedIn"
         >
-          <Button variant="outline" size="icon" aria-label="Share on LinkedIn">
+          <Button variant="outline" size="icon" aria-label="Partager sur LinkedIn">
             <Icon name="line-md:linkedin" class="size-4" />
           </Button>
         </Link>
@@ -167,10 +167,10 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           href={`https://www.reddit.com/submit?url=${encodeURIComponent(Astro.site + 'blog/' + post.id)}`}
           target="_blank"
           rel="noopener noreferrer"
-          title="Share on Reddit"
-          aria-label="Share on Reddit"
+          title="Partager sur Reddit"
+          aria-label="Partager sur Reddit"
         >
-          <Button variant="outline" size="icon" aria-label="Share on Reddit">
+          <Button variant="outline" size="icon" aria-label="Partager sur Reddit">
             <Icon name="line-md:reddit-loop" class="size-4" />
           </Button>
         </Link>
@@ -178,10 +178,10 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           href={`https://wa.me/?text=${encodeURIComponent(Astro.site + 'blog/' + post.id)}`}
           target="_blank"
           rel="noopener noreferrer"
-          title="Share on WhatsApp"
-          aria-label="Share on WhatsApp"
+          title="Partager sur WhatsApp"
+          aria-label="Partager sur WhatsApp"
         >
-          <Button variant="outline" size="icon" aria-label="Share on WhatsApp">
+          <Button variant="outline" size="icon" aria-label="Partager sur WhatsApp">
             <Icon name="mdi:whatsapp" class="size-4" />
           </Button>
         </Link>
@@ -189,10 +189,10 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           href={`https://t.me/share/url?url=${encodeURIComponent(Astro.site + 'blog/' + post.id)}`}
           target="_blank"
           rel="noopener noreferrer"
-          title="Share on Telegram"
-          aria-label="Share on Telegram"
+          title="Partager sur Telegram"
+          aria-label="Partager sur Telegram"
         >
-          <Button variant="outline" size="icon" aria-label="Share on Telegram">
+          <Button variant="outline" size="icon" aria-label="Partager sur Telegram">
             <Icon name="line-md:telegram" class="size-4" />
           </Button>
         </Link>
@@ -200,10 +200,10 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(Astro.site + 'blog/' + post.id)}`}
           target="_blank"
           rel="noopener noreferrer"
-          title="Share on Pinterest"
-          aria-label="Share on Pinterest"
+          title="Partager sur Pinterest"
+          aria-label="Partager sur Pinterest"
         >
-          <Button variant="outline" size="icon" aria-label="Share on Pinterest">
+          <Button variant="outline" size="icon" aria-label="Partager sur Pinterest">
             <Icon name="mdi:pinterest" class="size-4" />
           </Button>
         </Link>
@@ -241,8 +241,8 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
     size="icon"
     className="group fixed right-8 bottom-8 z-50 hidden"
     id="scroll-to-top"
-    title="Scroll to top"
-    aria-label="Scroll to top"
+    title="Retour en haut de la page"
+    aria-label="Retour en haut de la page"
   >
     <Icon
       name="lucide:arrow-up"

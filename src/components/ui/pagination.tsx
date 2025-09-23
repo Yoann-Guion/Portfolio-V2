@@ -76,7 +76,7 @@ function PaginationPrevious({
 }: React.ComponentProps<typeof PaginationLink>) {
   return (
     <PaginationLink
-      aria-label="Go to previous page"
+      aria-label="Aller à la page précédente"
       size="default"
       className={cn('gap-1 px-2.5 sm:pl-2.5', className)}
       isDisabled={isDisabled}
@@ -95,7 +95,7 @@ function PaginationNext({
 }: React.ComponentProps<typeof PaginationLink>) {
   return (
     <PaginationLink
-      aria-label="Go to next page"
+      aria-label="Aller à la page suivante"
       size="default"
       className={cn('gap-1 px-2.5 sm:pr-2.5', className)}
       isDisabled={isDisabled}

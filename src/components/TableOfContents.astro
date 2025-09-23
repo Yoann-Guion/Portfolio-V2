@@ -113,8 +113,8 @@ const groupedHeadings = groupHeadingsByH2(headings)
             <a
               href={`#${group.h2.slug}`}
               class="marker:text-foreground/30 flex-1 list-disc px-3 py-2 underline decoration-transparent underline-offset-[3px] transition-colors duration-200 hover:decoration-inherit xl:list-none font-medium"
-              aria-label={`Scroll to ${group.h2.text}`}
-              title={`Scroll to ${group.h2.text}`}
+              aria-label={`Aller à la section ${group.h2.text}`}
+              title={`Aller à la section ${group.h2.text}`}
             >
               {cleanupHeading(group.h2.text)}
             </a>
@@ -131,8 +131,8 @@ const groupedHeadings = groupHeadingsByH2(headings)
                   <a
                     href={`#${h3.slug}`}
                     class="marker:text-foreground/30 block list-disc px-3 py-1 underline decoration-transparent underline-offset-[3px] transition-colors duration-200 hover:decoration-inherit xl:list-none text-xs"
-                    aria-label={`Scroll to ${h3.text}`}
-                    title={`Scroll to ${h3.text}`}
+                    aria-label={`Aller à la section ${h3.text}`}
+                    title={`Aller à la section ${h3.text}`}
                   >
                     {cleanupHeading(h3.text)}
                   </a>
@@ -178,22 +178,16 @@ const groupedHeadings = groupHeadingsByH2(headings)
 
     // Setup collapsible sections pour tous les H2 qui ont des H3
     const toggles = document.querySelectorAll('.section-toggle')
-    console.log('Found toggles:', toggles.length) // Debug
     
     toggles.forEach((toggle) => {
       const listItem = toggle.closest('li')
       const children = listItem?.querySelector('.section-children')
       const parentDiv = toggle.closest('div')
-      
-      console.log('Toggle setup:', { toggle, children, parentDiv }) // Debug
-      
+            
       if (parentDiv && children) {
         parentDiv.addEventListener('click', (e) => {
-          console.log('Click detected on:', e.target) // Debug
-          
-          // Ne pas déclencher si on clique directement sur le lien
+          // Ignore clicks on links
           if (e.target.tagName === 'A') {
-            console.log('Click on link, ignoring') // Debug
             return
           }
           
@@ -201,32 +195,29 @@ const groupedHeadings = groupHeadingsByH2(headings)
           e.stopPropagation()
           
           const isHidden = children.classList.contains('hidden')
-          console.log('Is hidden:', isHidden) // Debug
           
           if (isHidden) {
             children.classList.remove('hidden')
             children.classList.add('flex')
             toggle.classList.add('rotate-90')
-            console.log('Opened section') // Debug
           } else {
             children.classList.add('hidden')
             children.classList.remove('flex')
             toggle.classList.remove('rotate-90')
-            console.log('Closed section') // Debug
           }
         })
       }
     })
   }
-  
-  // Exécuter au chargement initial
+
+  // Execute on initial load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', setupToc)
   } else {
     setupToc()
   }
   
-  // Exécuter lors des navigations Astro
+  // Execute on page navigation (Astro Islands)
   document.addEventListener('astro:page-load', setupToc)
   document.addEventListener('astro:after-swap', setupToc)
 </script>

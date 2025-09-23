@@ -90,7 +90,7 @@ const currentUrl = Astro.url
       </div>
     )}
     
-    <article class="prose col-start-2 max-w-none" aria-label="About content">
+    <article class="prose col-start-2 max-w-none" aria-label="à propos">
       <Content />
     </article>
 
@@ -110,21 +110,21 @@ const currentUrl = Astro.url
                 <ul class="list-disc pl-4">
                   {aboutEntry.data.contact.email && (
                     <li>
-                      <a href={`mailto:${aboutEntry.data.contact.email}`} aria-label="Email">
+                      <a href={`mailto:${aboutEntry.data.contact.email}`} aria-label="Me contacter par email">
                         Me contacter par mail
                       </a>
                     </li>
                   )}
                   {aboutEntry.data.contact.linkedin && (
                     <li>
-                      <a href={aboutEntry.data.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                      <a href={aboutEntry.data.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Lien vers LinkedIn">
                         LinkedIn
                       </a>
                     </li>
                   )}
                   {aboutEntry.data.contact.github && (
                     <li>
-                      <a href={aboutEntry.data.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                      <a href={aboutEntry.data.contact.github} target="_blank" rel="noopener noreferrer" aria-label="Lien vers GitHub">
                         GitHub
                       </a>
                     </li>
