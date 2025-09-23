@@ -34,25 +34,27 @@ L’application met aussi l’accent sur **l’accessibilité** et la **responsi
 - 📚 Gestion de sa propre ludothèque (ajout, suppression, suivi)  
 - 👥 Dimension communautaire : partage d’avis, critiques et expériences  
 - 📊 Suivi des jeux joués et souhaits futurs  
-- 📱 Interface responsive et intuitive  
+- 📱 Interface responsive, accessible et intuitive  
 
 
 ## 🛠️ Stack technique
 
-**Front-end**  
+### **Front-end**  
 - ⚡ Next.js  
 - 📘 TypeScript  
-- 🗂️ Redux Toolkit (gestion d’état)  
-- 🎨 Tailwind CSS  
+- 🗂️ Redux Toolkit 
+- 🦸‍♂️ HeroUI (anciennement NextUI)  
+- 🎨 Tailwind CSS
 
-**Back-end**  
-- 🖥️ Symfony (API REST)  
+### **Back-end**  
+- 🖥️ Symfony
 - 🐘 PHP  
 - 📊 Doctrine ORM  
 - 🗄️ MariaDB  
 
-**Versionning**  
-- 🔧 Git & GitHub  
+### **Versionning et outils**  
+- 🔧 Git & GitHub
+- 🗂️ Trello  
 
 ## 👨‍💻 Mes contributions
 

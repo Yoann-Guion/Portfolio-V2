@@ -29,17 +29,17 @@ C’est également un projet personnel pensé pour **démontrer mes compétences
 - 💾 **Enregistrement local** des données (sans inscription, confidentialité garantie)  
 - 🌗 **Thème clair/sombre**  
 - 🌍 **Gestion multilingue** (FR/EN)  
-- 📱 **Interface responsive** (desktop & mobile)
+- 📱 **Interface responsive et accessible** (desktop & mobile)
 
 
 ## 🛠️ Stack technique
 
-- ⚡ Next.js & React (frontend)  
-- 📘 TypeScript (typage strict)  
-- 🗂️ Zustand (gestion d’état globale)  
-- ✅ Zod (validation et transformation des données)  
-- 🎨 Tailwind CSS + ShadCN/UI (UI components)  
-- 🔎 Lucide icons (icônes légères et modernes)
+- ⚡ Next.js & React  
+- 📘 TypeScript
+- 🗂️ Zustand
+- ✅ Zod 
+- 🎨 Tailwind CSS + ShadCN/UI 
+- 🔎 Lucide icons
 
 > J’ai également structuré le projet avec une approche **scalable** : séparation du store Zustand en plusieurs slices (activité, timer, historique), validation des données avec Zod, persistance locale, etc.  
 Ce travail m’a permis de mettre en pratique des bonnes pratiques de développement tout en gardant un code clair et maintenable.
