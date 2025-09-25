@@ -38,13 +38,15 @@ const about = defineCollection({
       description: z.string().optional(),
       name: z.string().optional(),
       updatedDate: z.coerce.date().optional(),
-      image: image().optional(), // Comme dans votre collection blog
+      image: image().optional(),
       skills: z.array(z.string()).optional(),
-      contact: z.object({
-        email: z.string().optional(),
-        linkedin: z.string().optional(),
-        github: z.string().optional(),
-      }).optional(),
+      contact: z
+        .object({
+          email: z.string().optional(),
+          linkedin: z.string().optional(),
+          github: z.string().optional(),
+        })
+        .optional(),
     }),
 })
 

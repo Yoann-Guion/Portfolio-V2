@@ -1,8 +1,6 @@
 ---
 import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
-import ProjectCardJSX from '@/components/react/project-card'
-import BlogCard from '@/components/react/blog-card'
 import Skills from '@/components/react/skills'
 import { buttonVariants } from '@/components/ui/button'
 import Layout from '@/layouts/Layout.astro'
@@ -10,6 +8,7 @@ import { getAllProjects, getRecentPosts } from '@/lib/data-utils'
 import { SITE } from '@/consts'
 import { Image } from 'astro:assets'
 import YG from '../assets/YG-1.webp'
+import ProjectsCards from '@/components/ProjectsCards.astro'
 
 // const blog = await getRecentPosts(3);
 const allProjects = await getAllProjects()
@@ -80,7 +79,7 @@ const currentUrl = Astro.url;
       </div>
     </section>
 
-    <!-- PROJECT SECTION -->
+    <!-- PROJECTS SECTION -->
      <section class="flex flex-col gap-y-4" aria-labelledby="titre-mes-derniers-projets" role="region">
   <div class="relative" aria-labelledby="titre-mes-derniers-projets">
     <h2
@@ -99,7 +98,7 @@ const currentUrl = Astro.url;
     {
       latestProjects.map((project) => (
         <li>
-          <ProjectCardJSX entry={project} />
+          <ProjectsCards entry={project} />
         </li>
       ))
     }
