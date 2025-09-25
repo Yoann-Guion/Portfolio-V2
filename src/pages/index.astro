@@ -8,8 +8,10 @@ import { buttonVariants } from '@/components/ui/button'
 import Layout from '@/layouts/Layout.astro'
 import { getAllProjects, getRecentPosts } from '@/lib/data-utils'
 import { SITE } from '@/consts'
+import { Image } from 'astro:assets'
+import YG from '../assets/YG-1.webp'
 
-const blog = await getRecentPosts(3);
+// const blog = await getRecentPosts(3);
 const allProjects = await getAllProjects()
 const latestProjects = allProjects.slice(0, 3);
 const currentUrl = Astro.url;
@@ -24,10 +26,11 @@ const currentUrl = Astro.url;
       class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left"
     >
       <div class="relative overflow-hidden rounded-lg w-full px-0 sm:w-auto sm:overflow-hidden sm:rounded-lg sm:px-0">
-        <img
-          src="/img/YG-1.webp"
+        <Image
+          src={YG}
           alt="Photo Yoann Guion"
           fetchpriority="high"
+          loading="lazy"
           class="rounded-xl w-full h-115 sm:w-48 sm:h-64 object-cover shadow-lg"
         />
       </div>

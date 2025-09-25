@@ -16,8 +16,8 @@ const ProjectCardJSX = ({ entry }: { entry: CollectionEntry<'projects'> }) => {
             alt={entry.data.name}
             className="h-full w-full object-cover"
             loading="lazy"
-            width={160}
-            height={112}
+            width={322}
+            height={200}
           />
         </div>
 

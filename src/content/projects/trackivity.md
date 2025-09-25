@@ -2,7 +2,7 @@
 name: 'Trackivity'
 description: "Application de suivi d'activités avec objectifs hebdomadaires personnalisés"
 tags: ['react', 'next.js', 'tailwindcss', 'typescript', 'zustand', 'zod']
-image: '../../../public/static/trackivity.webp'
+image: '../../assets/projects/trackivity.webp'
 link: 'https://trackivity.vercel.app'
 startDate: '2025-03-03'
 ---

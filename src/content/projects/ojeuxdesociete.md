@@ -2,7 +2,7 @@
 name: 'O Jeux de Société'
 description: 'Plateforme communautaire dédiée au partage et à la gestion collaborative de ludothèques et à la critique de jeux de société.'
 tags: ['react', 'next.js', 'tailwindcss', 'typescript', 'redux', 'symfony']
-image: '../../../public/static/OJDS-home.webp'
+image: '../../assets/projects/OJDS-home.webp'
 link: 'https://ojeuxdesociete.fr/'
 startDate: '2024-07-30'
 endDate: '2024-11-25'

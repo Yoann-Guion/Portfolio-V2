@@ -15,24 +15,24 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activePath, setActivePath] = useState("/")
+  const [activePath, setActivePath] = useState('/')
 
-  const theme = useTheme();
-  const isDark = theme === 'dark';
-  
+  const theme = useTheme()
+  const isDark = theme === 'dark'
+
   useEffect(() => {
     setActivePath(window.location.pathname)
-    
+
     const handleRouteChange = () => {
       setActivePath(window.location.pathname)
     }
-    
+
     window.addEventListener('popstate', handleRouteChange)
     return () => {
       window.removeEventListener('popstate', handleRouteChange)
     }
   }, [])
-  
+
   useEffect(() => {
     const handleResize = debounce(() => {
       const isMobileView = window.matchMedia('(max-width: 768px)').matches
@@ -53,7 +53,15 @@ const Navbar = () => {
     const handleScroll = debounce(() => {
       const scrollY = window.scrollY
       setScrollLevel(
-        scrollY > 500 ? 4 : scrollY > 300 ? 3 : scrollY > 150 ? 2 : scrollY > 0 ? 1 : 0
+        scrollY > 500
+          ? 4
+          : scrollY > 300
+            ? 3
+            : scrollY > 150
+              ? 2
+              : scrollY > 0
+                ? 1
+                : 0,
       )
       setIsScrolled(scrollY > 0)
     }, 50)
@@ -82,8 +90,6 @@ const Navbar = () => {
     3: { width: '75%' },
     4: { width: '65%' },
   }
-
-
 
   return (
     <>
@@ -124,12 +130,16 @@ const Navbar = () => {
                 src="/img/YG-S-white.webp"
                 alt="Photo Yoann Guion fond blanc"
                 className="h-8 w-8 rounded-full"
+                decoding="async"
+                loading="lazy"
               />
             ) : (
               <img
                 src="/img/YG-S-black.webp"
                 alt="Photo Yoann Guion fond noir"
                 className="h-8 w-8 rounded-full"
+                decoding="async"
+                loading="lazy"
               />
             )}
 
