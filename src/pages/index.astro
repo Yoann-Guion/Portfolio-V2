@@ -9,6 +9,7 @@ import { SITE } from '@/consts'
 import { Image } from 'astro:assets'
 import YG from '../assets/YG-1.webp'
 import ProjectsCards from '@/components/ProjectsCards.astro'
+import { Picture } from 'astro:assets'
 
 // const blog = await getRecentPosts(3);
 const allProjects = await getAllProjects()
@@ -28,9 +29,11 @@ const currentUrl = Astro.url;
         <Image
           src={YG}
           alt="Photo Yoann Guion"
-          fetchpriority="high"
-          loading="lazy"
+          fetchpriority="high" 
           class="rounded-xl w-full h-115 sm:w-48 sm:h-64 object-cover shadow-lg"
+          width={356}
+          height={480}
+          sizes="(max-width: 640px) 356px, 192px"
         />
       </div>
       <div class="mt-8 sm:mt-0 sm:max-w-xl">

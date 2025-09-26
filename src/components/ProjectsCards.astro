@@ -11,12 +11,12 @@ const { entry } = Astro.props
     class="flex flex-col gap-4 sm:flex-row"
     aria-label={`Lien vers le projet ${entry.data.name}`}
   >
-    <div class="h-45 w-full shrink-0 overflow-hidden rounded-md sm:h-28 sm:w-45">
+    <div class="h-4 shrink-0 overflow-hidden rounded-md sm:h-28 sm:w-45">
       <Image
         src={entry.data.image}
         alt={entry.data.name}
         loading="lazy"
-        widths={[322, 644]}
+        width="644"
         sizes="(max-width: 768px) 100vw, 322px"
         class="h-full w-full object-cover"
       />

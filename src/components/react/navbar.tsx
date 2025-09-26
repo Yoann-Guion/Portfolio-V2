@@ -127,7 +127,7 @@ const Navbar = () => {
           >
             {isDark ? (
               <img
-                src="/img/YG-S-white.webp"
+                src="/img/YG-blanc-48.webp"
                 alt="Photo Yoann Guion fond blanc"
                 className="h-8 w-8 rounded-full"
                 decoding="async"
@@ -135,9 +135,9 @@ const Navbar = () => {
               />
             ) : (
               <img
-                src="/img/YG-S-black.webp"
+                src="/img/YG-noir-48.webp"
                 alt="Photo Yoann Guion fond noir"
-                className="h-8 w-8 rounded-full"
+                className="-mr-1 h-8 w-8 rounded-full"
                 decoding="async"
                 loading="lazy"
               />
