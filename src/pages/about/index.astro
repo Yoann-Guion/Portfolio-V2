@@ -107,25 +107,25 @@ const currentUrl = Astro.url
             <>
               <hr class="my-2 border-t" />
               <div class="flex flex-col gap-2 text-sm text-muted-foreground">
-                <h3 class="text-base font-semibold">Contacts</h3>
+                <h3 class="text-base font-semibold">Contact</h3>
                 <ul class="list-disc pl-4">
                   {aboutEntry.data.contact.email && (
                     <li>
-                      <a href={`mailto:${aboutEntry.data.contact.email}`} aria-label="Me contacter par email">
+                      <a href={`mailto:${aboutEntry.data.contact.email}`} aria-label="Me contacter par email"  class="inline-block min-h-[32px] min-w-[32px] px-3 py-2 sm:min-h-[24px] sm:min-w-[24px] sm:px-2 sm:py-1">
                         Me contacter par mail
                       </a>
                     </li>
                   )}
                   {aboutEntry.data.contact.linkedin && (
                     <li>
-                      <a href={aboutEntry.data.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Lien vers LinkedIn">
+                      <a href={aboutEntry.data.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Lien vers LinkedIn"  class="inline-block min-h-[32px] min-w-[32px] px-3 py-2 sm:min-h-[24px] sm:min-w-[24px] sm:px-2 sm:py-1">
                         LinkedIn
                       </a>
                     </li>
                   )}
                   {aboutEntry.data.contact.github && (
                     <li>
-                      <a href={aboutEntry.data.contact.github} target="_blank" rel="noopener noreferrer" aria-label="Lien vers GitHub">
+                      <a href={aboutEntry.data.contact.github} target="_blank" rel="noopener noreferrer" aria-label="Lien vers GitHub"  class="inline-block min-h-[32px] min-w-[32px] px-3 py-2 sm:min-h-[24px] sm:min-w-[24px] sm:px-2 sm:py-1">
                         GitHub
                       </a>
                     </li>
