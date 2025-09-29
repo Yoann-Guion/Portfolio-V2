@@ -65,8 +65,8 @@ const currentUrl = Astro.url;
                 alt={project.data.name}
                 src={project.data.image}
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-                fetchpriority="low"
+                loading="eager"
+                fetchpriority="high"
                 width={600}
                 height={375}
               />
@@ -100,13 +100,15 @@ const currentUrl = Astro.url;
       ))}
     </div>
 
-    <div class="mt-16 mb-16">
-      <PaginationComponent
-        currentPage={page.currentPage}
-        totalPages={page.lastPage}
-        baseUrl="/projects/"
-        client:load
-      />
-    </div>
+    {page.lastPage > 1 && (
+      <div class="mt-16 mb-16">
+        <PaginationComponent
+          currentPage={page.currentPage}
+          totalPages={page.lastPage}
+          baseUrl="/projects/"
+          client:load
+        />
+      </div>
+    )}
   </section>
 </Layout>

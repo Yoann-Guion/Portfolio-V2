@@ -58,7 +58,8 @@ function PaginationLink({
       data-disabled={isDisabled}
       aria-disabled={isDisabled ? 'true' : undefined}
       tabIndex={isDisabled ? -1 : undefined}
-      href={isDisabled ? '#' : props.href}
+      href={props.href || '#'}
+      onClick={isDisabled ? (e) => e.preventDefault() : undefined}
       className={cn(
         buttonVariants({
           variant: isActive ? 'outline' : 'ghost',
@@ -170,7 +171,7 @@ const PaginationComponent: React.FC<PaginationProps> = ({
       <PaginationContent className="flex-wrap">
         <PaginationItem>
           <PaginationPrevious
-            href={currentPage > 1 ? getPageUrl(currentPage - 1) : undefined}
+            href={currentPage > 1 ? getPageUrl(currentPage - 1) : '#'}
             isDisabled={currentPage === 1}
           />
         </PaginationItem>
@@ -194,9 +195,7 @@ const PaginationComponent: React.FC<PaginationProps> = ({
 
         <PaginationItem>
           <PaginationNext
-            href={
-              currentPage < totalPages ? getPageUrl(currentPage + 1) : undefined
-            }
+            href={currentPage < totalPages ? getPageUrl(currentPage + 1) : '#'}
             isDisabled={currentPage === totalPages}
           />
         </PaginationItem>
