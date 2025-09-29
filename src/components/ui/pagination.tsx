@@ -56,6 +56,9 @@ function PaginationLink({
       data-slot="pagination-link"
       data-active={isActive}
       data-disabled={isDisabled}
+      aria-disabled={isDisabled ? 'true' : undefined}
+      tabIndex={isDisabled ? -1 : undefined}
+      href={isDisabled ? '#' : props.href}
       className={cn(
         buttonVariants({
           variant: isActive ? 'outline' : 'ghost',
