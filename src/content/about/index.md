@@ -1,7 +1,7 @@
 ---
 title: "À propos de moi"
 subtitle: "Qui suis-je ?"
-description: "Développeur web junior passionné par les nouvelles technologies et en constante évolution."
+description: "Développeur web junior passionné par les nouvelles technologies, actuellement à la recherche d'un poste stimulant."
 name: "Yoann Guion"
 image: "../../assets/YG-2.webp"
 updatedDate: 2025-01-20
