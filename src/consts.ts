@@ -3,12 +3,12 @@ import type { IconMap, SocialLink, Site } from '@/types'
 export const SITE: Site = {
   title: 'Yoann GUION',
   description:
-    "Développeur web junior spécialisé en React/Next.js, je crée des applications modernes, claires et orientées utilisateur. J’explore également le back-end avec Node.js et Symfony afin de concevoir des projets complets et bien structurés.",
+    'Développeur web junior spécialisé en Next.js et TypeScript, je crée des applications modernes, claires et orientées utilisateur. J’explore également le back-end avec Node.js afin de concevoir des projets complets et bien structurés.',
   href: 'https://yoannguion.com',
   author: 'Yoann Guion',
   locale: 'fr-FR',
   location: 'France',
-  email: 'yoann'
+  email: 'yoann',
 }
 
 export const NAV_LINKS: SocialLink[] = [

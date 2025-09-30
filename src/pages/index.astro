@@ -29,11 +29,12 @@ const currentUrl = Astro.url;
           src={YG}
           alt="Photo Yoann Guion"
           fetchpriority="high"
-          loading="eager" 
-          class="rounded-xl w-full h-115 sm:w-48 sm:h-64 object-cover shadow-lg"
-          width={356}
-          height={480}
-          sizes="(max-width: 640px) 356px, 192px"
+          loading="eager"
+          class="rounded-xl w-full h-115 object-cover object-top shadow-lg sm:object-center sm:h-64 sm:w-48"
+          width={800}
+          height={1080}
+          widths={[400, 600, 800]}
+          sizes="(max-width: 640px) 100vw, 192px"
         />
       </div>
       <div class="mt-8 sm:mt-0 sm:max-w-xl">
