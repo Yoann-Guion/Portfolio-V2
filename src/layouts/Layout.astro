@@ -7,6 +7,7 @@ import Head from '@/components/Head.astro'
 import Navbar from '@/components/react/navbar'
 import { SITE } from '@/consts'
 import { cn } from '@/lib/utils'
+import Analytics from '@vercel/analytics/astro'
 
 const {
   isWide = false
@@ -62,6 +63,7 @@ const {
         >
           <slot />
         </div>
+        <Analytics />
       </main>
       <Footer />
     </div>
