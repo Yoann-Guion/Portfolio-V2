@@ -21,7 +21,7 @@ skills:
   - "Git"
   - "GitHub"
 contact:
-  email: "yoann.guion@mail.com"
+  email: "yoannguion@ik.me"
   linkedin: "https://linkedin.com/in/yoann-guion"
   github: "https://github.com/Yoann-Guion"
 ---
@@ -210,14 +210,14 @@ Vous souhaitez approfondir votre connaissance de mon profil ?
 
 ![CV de Yoann Guion](/static/cv/CV-YoannGUION.webp)
 
-- 🎨 [Télécharger mon CV classique (PDF)](/static/cv/CVYoannGUION2025Fullstack.pdf) - Format traditionnel pour candidatures formelles
+- 🎨 [Télécharger mon CV classique (PDF)](/static/cv/CVYoannGUION2025-Fullstack.pdf) - Format traditionnel pour candidatures formelles
 - 📋 [Télécharger mon CV optimisé ATS (PDF)](/static/cv/CVYoannGUION2025FS-ATS.pdf) - Version optimisée pour les systèmes de recrutement automatisés
 
 ---
 
 ## 📬 Contact
 
-**📧 Email :** [yoann.guion[@]mail.com](mailto:yoann.guion@mail.com)  
+**📧 Email :** [yoannguion[@]ik.me](mailto:yoannguion@ik.me)  
 **💼 LinkedIn :** [linkedin.com/in/yoann-guion](https://linkedin.com/in/yoann-guion)  
 **💻 GitHub :** [github.com/Yoann-Guion](https://github.com/Yoann-Guion)
 
