@@ -17,7 +17,7 @@ L’objectif est à la fois professionnel (montrer mon travail aux recruteurs) e
 
 ## 🚀 Démo en ligne
 
-👉 [Voir le portfolio](https://portfolio-v2-ivory-eta.vercel.app/)  
+👉 [Voir le portfolio](https://yoannguion.com/)  
 
 
 
