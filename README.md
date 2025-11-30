@@ -17,7 +17,7 @@ L’objectif est à la fois professionnel (montrer mon travail aux recruteurs) e
 
 ## 🚀 Démo en ligne
 
-👉 [Voir le portfolio](https://portfolio-v2-ivory-eta.vercel.app/)  
+👉 [Voir le portfolio](https://www.yoannguion.com/)  
 
 
 
@@ -72,7 +72,7 @@ Aller sur http://localhost:3010
 
 ## 📬 Contact
 - 📧 [yoannguion@[ik].me](mailto:yoannguion@ik.me)  
-- 🌐 [Portfolio en ligne](https://portfolio-v2-ivory-eta.vercel.app/)  
+- 🌐 [Portfolio en ligne](https://www.yoannguion.com/)  
 - 💼 [LinkedIn](https://www.linkedin.com/in/yoann-guion/)  
 - 🐱 [Github](https://github.com/Yoann-Guion)
 
